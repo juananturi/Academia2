@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\storeCursoRequest;
 use App\Models\Curso;
 use Illuminate\Http\Request;
 
@@ -37,11 +38,11 @@ class CursoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(storeCursoRequest $request)
     {
+        $cursito = new Curso();//Lo que hicimos fue crear una instancia de la clase Curso
         //Se devuelve la peticion hecha al servidor
         //return $request->all();
-        $cursito = new Curso();//Lo que hicimos fue crear una instancia de la clase Curso
         $cursito->nombre = $request->input('nombre');
         $cursito->descripcion = $request->input('descripcion');
         $cursito->duracion = $request->input('duracion');
@@ -111,6 +112,15 @@ class CursoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cursito = Curso::find($id);
+        $urlImagenBD = $cursito->imagen;
+        //return $urlImagenBD;
+        $nombreImagen = str_replace('public/', '\storage\\', $urlImagenBD);
+        //return $nombreImagen;
+        $rutaCompleta = public_path().$nombreImagen;
+        //return $rutaCompleta;
+        unlink($rutaCompleta);
+        $cursito -> delete();
+        return 'Eliminado';
     }
 }
