@@ -22,6 +22,4 @@
                 </div>{{--cierre de col--}}
         @endforeach
     </div>{{--cierre de row--}}
-    {{--La doble llave sirve par interpolar, es decir, sirve para trear una variable
-        de otro lenguaje al lenguaje que se esta usndo actualmente--}}
 @endsection

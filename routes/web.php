@@ -6,6 +6,7 @@ use App\Http\Controllers\MiControlador;
 use App\Http\Controllers\HeladeriaController;
 use App\Http\Controllers\ControladorPrecios;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\DocenteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,3 +48,5 @@ Route::get('/precios/{opc}', [ControladorPrecios::class,'precio']);
 Route::get('/iva/{nom}/{val}', [ControladorPrecios::class,'getIVA'] );
 
 Route::resource('cursos', CursoController::class);
+
+Route::resource('docentes', DocenteController::class);
