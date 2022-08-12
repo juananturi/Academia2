@@ -4,11 +4,10 @@
 
 @section('contenido')
     <h2>Nuestros Docentes</h2>
-    <br>
     <div class="row">
         @foreach ($docentico as $item)
-                <div class="col-sm">
-                    <div class="card" style="width: 18rem;">
+                <div class="m-3 col-sm">
+                    <div class="card" style="width: 18rem; height:360px">
                         <img style="height: 150px " class="card-img-top" src="{{Storage::url($item->imagen)}}" alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">{{$item->nombres}} {{$item->apellidos}}</h4>
@@ -19,5 +18,5 @@
                 </div>{{--cierre de col--}}
         @endforeach
     </div>
-    <a href="/docentes/create" class="m-5 btn btn-success">Añadir docente nuevo</a>
+    <a href="/docentes/create" class="m-3 btn btn-success">Añadir docente nuevo</a>
 @endsection
