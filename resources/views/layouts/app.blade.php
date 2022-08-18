@@ -7,9 +7,9 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
             <a class="navbar-brand" href='/cursos'>
-                <img src={{ asset('logo.png') }} alt="" height="80" width="80">
+                <img src={{ asset('anturi.png') }} alt="" height="80" width="80">
             </a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

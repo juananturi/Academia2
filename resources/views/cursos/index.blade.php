@@ -16,7 +16,7 @@
                             <h5 class="card-title">{{$item->nombre}}</h5>
                             {{-- <p class="card-text">Descripción: {{$item->descripcion}}</p>
                             <p class="card-text">Duración: {{$item->duracion}} horas</p> --}}
-                            <a href="/cursos/{{$item->id}}" class="btn btn-primary">Ver Detalle</a>
+                            <a href="/cursos/{{$item->id}}" class="btn btn-info">Ver Detalle</a>
                         </div>
                     </div>
                 </div>{{--cierre de col--}}

@@ -16,7 +16,7 @@
             @endforeach
         @endif
         <br>
-            <h2>Aquí puedes añadir un nuevo docente</h2>
+            <h2>Añada un nuevo docente</h2>
             <div class="form-group">
                 <label for="nombres">Nombres</label>
                 <input id="nombres" class="form-control" type="text" name="nombres">
